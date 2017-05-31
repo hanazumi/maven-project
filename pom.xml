@@ -21,13 +21,20 @@
     <module>webapp</module>
   </modules>
 
-  <distributionManagement>
-    <site>
-      <id>site-server</id>
-      <name>Test Project Site</name>
-      <url>file:///tmp/maven-project-site</url>
-    </site>
-  </distributionManagement>
+  <repositories>
+    <repository>
+      <id>hpid-central</id>
+      <name>HP-ID Central Repository</name>
+      <url>https://nexus.hpcwp.com/repository/mvn-cwp-central</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 
   <build>
     <plugins>
